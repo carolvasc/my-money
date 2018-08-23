@@ -1,4 +1,5 @@
 const BillingCycle = require('./billingCycle')
+const errorHandler = require('../common/errorHandler')
 
 BillingCycle.methods(['get', 'post', 'put', 'delete'])
 
@@ -6,6 +7,9 @@ BillingCycle.methods(['get', 'post', 'put', 'delete'])
 Usamos o new para pegar a versão mais recente
 e o runValidators para rodar as validações */
 BillingCycle.updateOptions({ new: true, runValidators: true })
+
+/* Chama o middleware de tratamento de erro após as requisições post e put */
+BillingCycle.after('post', errorHandler).after('put', errorHandler)
 
 /* Rota para recuperar o total de registros salvos */
 BillingCycle.route('count', (req, res, next) => {
