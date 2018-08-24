@@ -28,7 +28,7 @@ module.exports = {
         new ExtractTextPlugin('app.css')
     ],
     module: {
-        loarders: [{
+        loaders: [{
             test: /.js[x]?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
