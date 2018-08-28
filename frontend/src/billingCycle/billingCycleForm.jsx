@@ -20,9 +20,11 @@ class BillingCycleForm extends React.Component {
                         readOnly={readOnly} label='Ano' cols='12 3' placeholder='Informe o ano' />
                 </div>
                 <div className="box-footer">
-                    <button type='submit' className="btn btn-primary">Submit</button>
-                    <button type='button' className="btn btn-default"
+                    <button type='button' className="btn btn-default pull-right"
                         onClick={this.props.init}>Cancelar</button>
+                    <button type='submit' className={`btn btn-${this.props.submitClass} pull-right`}>
+                        {this.props.submitLabel}
+                    </button>
                 </div>
             </form>
         )

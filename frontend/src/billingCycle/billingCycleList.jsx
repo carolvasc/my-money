@@ -3,6 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { getList, showUpdate, showDelete } from './billingCycleActions'
 
+import '../common/template/custom.css'
+
 class BillingCycleList extends React.Component {
 
     componentDidMount() {
@@ -37,7 +39,7 @@ class BillingCycleList extends React.Component {
                             <th>Nome</th>
                             <th>Mês</th>
                             <th>Ano</th>
-                            <th>Ações</th>
+                            <th className='table-actions'>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
