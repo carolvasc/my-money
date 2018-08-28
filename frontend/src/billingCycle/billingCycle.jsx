@@ -25,7 +25,7 @@ class BillingCycle extends React.Component {
     render() {
         return (
             <div>
-                <ContentHeader title='Ciclos de Pagamento' subtitle='Cadastro' />
+                <ContentHeader title='Ciclos de Pagamentos' subtitle='Cadastro' />
                 <Content>
                     <Tabs>
                         <TabsHeader>
@@ -41,7 +41,9 @@ class BillingCycle extends React.Component {
                             <TabContent id='tabCreate'>
                                 <Form onSubmit={this.props.create} />
                             </TabContent>
-                            <TabContent id='tabUpdate'><h1>Alterar</h1></TabContent>
+                            <TabContent id='tabUpdate'>
+                                <Form  />
+                            </TabContent>
                             <TabContent id='tabDelete'><h1>Excluir</h1></TabContent>
                         </TabsContent>
                     </Tabs>
