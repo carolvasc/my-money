@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const env = require('../../env')
+const env = require('../.env')
 
 module.exports = (req, res, next) => {
     // Caso seja uma requisição do tipo OPTIONS, o authSecret não autenticará o token
