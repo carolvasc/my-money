@@ -50,6 +50,14 @@ export function showDelete(billingCycle) {
 }
 
 function showTab(tab, bc) {
+    if (bc.credits.length < 1) {
+        bc.credits = [{}]
+    }
+
+    if (bc.debts.length < 1) {
+        bc.debts = [{}]
+    }
+
     return [
         showTabs(tab),
         selectTab(tab),

@@ -6,10 +6,21 @@ import { reduxForm, Field, formValueSelector } from 'redux-form'
 import { init } from './billingCycleActions'
 import LabelAndInput from '../common/form/labelAndInput'
 import ItemList from './itemList'
+import Summary from './summary'
 
 class BillingCycleForm extends React.Component {
+
+    calculateSummary() {
+        const sum = (total, valorAtual) => total + valorAtual
+        return {
+            sumOfCredits: this.props.credits.map(c => +c.value || 0).reduce(sum),
+            sumOfDebts: this.props.debts.map(d => +d.value || 0).reduce(sum)
+        }
+    }
+
     render() {
         const { handleSubmit, readOnly, credits, debts } = this.props
+        const { sumOfCredits, sumOfDebts } = this.calculateSummary()
         return (
             <form role='form' onSubmit={handleSubmit}>
                 <div className="box-body">
@@ -19,8 +30,9 @@ class BillingCycleForm extends React.Component {
                         readOnly={readOnly} label='Mês' cols='12 3' placeholder='Informe o mês' />
                     <Field name='year' component={LabelAndInput} type='number' autoComplete='off'
                         readOnly={readOnly} label='Ano' cols='12 3' placeholder='Informe o ano' />
-                    <ItemList cols='12 6' readOnly={readOnly} list={credits} field='credits' legend='Créditos'/>
-                    <ItemList cols='12 6' readOnly={readOnly} list={debts} field='debts' legend='Débitos' showStatus={true}/>
+                    <Summary credit={sumOfCredits} debt={sumOfDebts} />
+                    <ItemList cols='12 6' readOnly={readOnly} list={credits} field='credits' legend='Créditos' />
+                    <ItemList cols='12 6' readOnly={readOnly} list={debts} field='debts' legend='Débitos' showStatus={true} />
                 </div>
                 <div className="box-footer">
                     <button type='button' className="btn btn-default pull-right"
