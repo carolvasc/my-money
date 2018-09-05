@@ -6,7 +6,7 @@
 <p>A tela de Ciclos de Pagamentos possui um grid para a visualização dos ciclos já cadastrados. Através desse grid também é possível incluir um novo ciclo (aba Incluir), e editar e/ou excluir um já cadastrado, através dos botões de ação.</p>
 <p>Nas telas de inclusão e alteração, haverão cards parecidos com o do dashboard, informando os totais de créditos e débitos e o valor consolidado referente àquele ciclo. Ao adicionar um crédito ou débito, os valores do card serão automaticamente alterados e o valor consolidado será recalculado.</p>
 
-## Tecnologias
+### Tecnologias
 
 <p>Além do HTML5 e CSS3, foi utlizado um template gratuito do bootstrap, o <b>AdminLTE</b>.</p>
 <p>Também no front-end, foi utilizado o <b>ReactJS</b> (Webpack) com o gerenciador de estados <b>Redux</b>.</p>
@@ -43,7 +43,7 @@ Para uma melhor usabilidade, na segunda versão da aplicação pretendo incluir:
 * Configurações do Usuário
   * Alterar Senha
   * Incluir ou Alterar imagem
- * Modal de confirmação de exclusão.
+ * Modais de confirmação.
  
  <br />
   <h5>Versão 1.0</h5>
