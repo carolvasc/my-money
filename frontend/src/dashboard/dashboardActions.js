@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://localhost:4003/api'
+const BASE_URL = 'https://my-money-b.herokuapp.com/api'
 var request
 
 export function getSummary() {

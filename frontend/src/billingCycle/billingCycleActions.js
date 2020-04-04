@@ -3,7 +3,7 @@ import { toastr } from 'react-redux-toastr'
 import { reset as resetForm, initialize } from 'redux-form'
 import { showTabs, selectTab } from '../common/tab/tabActions'
 
-const BASE_URL = 'http://localhost:4003/api'
+const BASE_URL = 'https://my-money-b.herokuapp.com/api'
 const INITIAL_VALUES = { credits: [{}], debts: [{}] }
 
 export function getList() {
