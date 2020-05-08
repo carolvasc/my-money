@@ -10,15 +10,19 @@ Is a finance management system that is very useful for organizing weekly, monthl
 
 ![](src/assets/my-money-register.png)
 
+### :rocket: Demo
+<p>The deploy was made on <b>Netlify</b> and you can access in here https://my-money-cvs.netlify.app/</p>
+
+<p><b>PS:</b> The first request (registration or login) will take a while to return an answer because the API will be in "hibernate" mode.
+The "hibernate" "mode happens because the API doesn't get a lot of constant access.</p>
+
 ## Technologies
-- HTML&&CSS
+- HTML && CSS
 - Bootstrap's template <b>AdminLTE</b>
 - ReactJS
 - Webpack
 - The state management <b>Redux</b>
-- NodeJS
-- The NoSQL database <b>MongoDB</b>
-
+- Deployed on <b>Netlify</b>
 
 ## Installation
 Download NPM, Node and MongoDB.
