@@ -23,7 +23,7 @@ Is a finance management system that is very useful for organizing weekly, monthl
 ## Installation
 Download NPM, Node and MongoDB.
 
-Clone and configure the backend [the-meat-api](https://github.com/carolvasc/my-money-api)  
+Clone and configure the backend [My Money API.](https://github.com/carolvasc/my-money-api)
 
 Clone this repo locally:
 ```sh
