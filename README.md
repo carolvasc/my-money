@@ -1,49 +1,46 @@
-# My Money
+[![Build Status](https://travis-ci.org/akashnimare/foco.svg?branch=master)](https://travis-ci.org/akashnimare/foco)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-<p>O <b>My Money</b>, chamado também de <b>Ciclos de Pagamentos</b>, é uma aplicação que pode ser utilizada tanto para o dia-a-dia, como para o controle de gastos de uma empresa.</p>
-<p>Sua tela de login disponibiliza também um link para cadastro do usuário. Ao logar, é gerado um Token que será enviado em todas as requisições, e a senha será criptografada antes de ser salva no banco.</p>
-<p>A página inicial do sistema é um dashboard com os totais de créditos e débitos, e seu valor consolidado.
-<p>A tela de Ciclos de Pagamentos possui um grid para a visualização dos ciclos já cadastrados. Através desse grid também é possível incluir um novo ciclo (aba Incluir), e editar e/ou excluir um já cadastrado, através dos botões de ação.</p>
-<p>Nas telas de inclusão e alteração, haverão cards parecidos com o do dashboard, informando os totais de créditos e débitos e o valor consolidado referente àquele ciclo. Ao adicionar um crédito ou débito, os valores do card serão automaticamente alterados e o valor consolidado será recalculado.</p>
+<h1 align="center">My Money</h1>
 
-### Tecnologias
+Is a finance management system that is very useful for organizing weekly, monthly or any way the user sees fit, as it is totally free to create your payment cycles.
 
-<p>Além do HTML5 e CSS3, foi utlizado um template gratuito do bootstrap, o <b>AdminLTE</b>.</p>
-<p>Também no front-end, foi utilizado o <b>ReactJS</b> (Webpack) com o gerenciador de estados <b>Redux</b>.</p>
-<p>No back-end foi utilizado <b>NodeJS</b> com Express e o banco de dados não-relacional <b>MongoDB</b>.</p>
+## A little bit about the screens...
+<p>The homepage is a dashboard with some cards that inform the totals of credit, debit and their consolidated amount. </p>
+<p> The <b>Payment Cycles</b> page lists all cycles already registered and allows their registration, editing and deletion.</p>
 
+![](src/assets/my-money-register.png)
 
-## Instalação
-
-* Baixar o NPM, Node e MongoDB.
-
-* Dentro da pasta do Mongo, encontre a pasta bin e digite `mongod` para executá-lo (via terminal).
-  * Exemplo: `C:\Arquivos de Programas\MongoDB\Server\4.0\bin> mongod`
-
-* Abra o projeto em uma IDE de sua preferência ou apenas o terminal do sistema operacional.
-
-* Para startar o back-end
-  * `cd backend`
-  * `npm install`
-  * `npm run dev` ou `npm run production`
-
-* Para startar o front-end
-  * `cd frontend`
-  * `npm install`
-  * `npm run dev`
-  
-* Caso todo o processo tenha ocorrido normalmente, a aplicação estará disponível em `localhost:8080`.
+## Technologies
+- HTML&&CSS
+- Bootstrap's template <b>AdminLTE</b>
+- ReactJS
+- Webpack
+- The state management <b>Redux</b>
+- NodeJS
+- The NoSQL database <b>MongoDB</b>
 
 
-## Upgrade (Versão 2.0)
+## Installation
+Download NPM, Node and MongoDB.
 
-Para uma melhor usabilidade, na segunda versão da aplicação pretendo incluir:
-* Gráficos no dashboard
-* Paginação no grid
-* Configurações do Usuário
-  * Alterar Senha
-  * Incluir ou Alterar imagem
- * Modais de confirmação.
- 
- <br />
-  <h5>Versão 1.0</h5>
+Clone and configure the backend [the-meat-api](https://github.com/carolvasc/my-money-api)  
+
+Clone this repo locally:
+```sh
+$ git clone https://github.com/carolvasc/my-money.git
+```
+Install the dependencies:
+```
+$ npm install
+```
+Open your terminal and run the application:
+```sh
+$ npm run dev
+```
+
+If the whole process has gone smoothly, an application available at `localhost:8080`.
+
+<br />
+<h5>Versão 1.0</h5>
